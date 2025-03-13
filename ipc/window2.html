@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>窗口 2</title>
+</head>
+<body>
+  <h2>窗口 2</h2>
+  <input type="text" id="message" placeholder="输入消息">
+  <button onclick="sendMessage()">发送消息</button>
+  <div id="received"></div>
+
+  <script>
+    function sendMessage() {
+      const message = document.getElementById('message').value
+      window.electronAPI.sendMessage({
+        from: '窗口 2',
+        content: message
+      })
+    }
+
+    window.electronAPI.onMessageReceived((data) => {
+      const div = document.getElementById('received')
+      div.innerHTML += `<p>收到来自 ${data.from} 的消息: ${data.content}</p>`
+    })
+  </script>
+</body>
+</html>

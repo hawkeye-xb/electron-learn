@@ -1,0 +1,11 @@
+{
+  "name": "electron-ipc-demo",
+  "version": "1.0.0",
+  "main": "main-messageport.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^25.3.1"
+  }
+}
