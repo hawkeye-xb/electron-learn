@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electron 生命周期演示</title>
+</head>
+<body>
+    <h1>Electron 生命周期演示</h1>
+    <script>
+        // DOM 生命周期事件
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Content Loaded')
+        })
+
+        window.addEventListener('load', () => {
+            console.log('Window Loaded')
+        })
+
+        window.addEventListener('beforeunload', (event) => {
+            console.log('Window Before Unload')
+            // 可以在这里阻止页面关闭
+            // event.preventDefault()
+            // event.returnValue = ''
+        })
+
+        window.addEventListener('unload', () => {
+            console.log('Window Unload')
+        })
+    </script>
+</body>
+</html>
