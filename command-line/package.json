@@ -1,0 +1,16 @@
+{
+  "name": "command-line",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Electron CommandLine 演示应用",
+  "dependencies": {
+    "electron": "^35.0.1"
+  }
+}
